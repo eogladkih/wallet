@@ -9,13 +9,14 @@ import ru.ex.wallet.service.UserService
 @Service
 class UserServiceImpl(
     private val userRepository: UserRepository
-): UserService {
+) : UserService {
     override fun getAll(): List<UserDto> {
-        return userRepository.findAll().map{it.toDto()}
+        return userRepository.findAll().map { it.toDto() }
     }
+
     private fun UserEntity.toDto(): UserDto =
         UserDto(
             id = this.id,
-            name = this.name
+            name = this.name,
         )
 }

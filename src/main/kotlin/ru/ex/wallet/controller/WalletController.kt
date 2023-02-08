@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RestController
 import ru.ex.wallet.dto.WalletDto
 
 @RestController
-@RequestMapping("wallets")
+@RequestMapping("/wallets")
 class WalletController {
     @GetMapping
     fun getAll(): List<WalletDto> = listOf(
         WalletDto(1, "RUR"),
-        WalletDto(2,"USD"),
-        WalletDto(3,"TBT")
+        WalletDto(2, "USD"),
+        WalletDto(3, "TBT"),
     )
 }

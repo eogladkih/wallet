@@ -1,8 +1,6 @@
 package ru.ex.wallet.dto
 
-import java.util.Currency
-
-class WalletDto(
+data class WalletDto(
     val id: Int,
-    val cur: String
+    val cur: String,
 )

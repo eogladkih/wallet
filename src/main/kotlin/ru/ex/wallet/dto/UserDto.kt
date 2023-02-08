@@ -1,6 +1,6 @@
 package ru.ex.wallet.dto
 
-class UserDto(
+data class UserDto(
     val id: Int,
-    val name: String
+    val name: String,
 )
