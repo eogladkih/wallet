@@ -6,6 +6,7 @@ plugins {
     kotlin("jvm") version "1.7.22"
     kotlin("plugin.spring") version "1.7.22"
     kotlin("plugin.jpa") version "1.7.22"
+    id("org.jlleitschuh.gradle.ktlint-idea") version "11.2.0"
 }
 
 group = "ru.ex"
