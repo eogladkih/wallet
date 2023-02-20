@@ -15,6 +15,7 @@ class WalletEntity(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
     val name: String,
+//    TODO
 //    @ManyToOne
 //    @JoinColumn(name = "wallet_user_id")
 //    val user: UserEntity,

@@ -13,6 +13,7 @@ class UserEntity(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
     var name: String,
+//    TODO
 //    @OneToMany(mappedBy = "user")
 //    val wallets: List<WalletEntity> = emptyList(),
 )

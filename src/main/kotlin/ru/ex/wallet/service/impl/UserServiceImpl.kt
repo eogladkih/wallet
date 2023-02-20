@@ -12,13 +12,11 @@ import java.lang.RuntimeException
 class UserServiceImpl(
     private val userRepository: UserRepository,
 ) : UserService {
-    override fun getAll(): List<UserDto> {
-        return userRepository.findAll().map { it.toDto() }
-    }
+    override fun getAll(): List<UserDto> =
+        userRepository.findAll().map { it.toDto() }
 
-    override fun create(dto: UserDto): Int {
-        return userRepository.save(dto.toEntity()).id
-    }
+    override fun create(dto: UserDto): Int =
+        userRepository.save(dto.toEntity()).id
 
     override fun update(id: Int, dto: UserDto) {
         val existingUser = userRepository.findByIdOrNull(id)
@@ -36,11 +34,10 @@ class UserServiceImpl(
         userRepository.deleteById(existingUser.id)
     }
 
-    override fun read(id: Int): UserDto {
-        return userRepository.findByIdOrNull(id)
+    override fun read(id: Int): UserDto =
+        userRepository.findByIdOrNull(id)
             ?.toDto()
             ?: throw RuntimeException("User not found")
-    }
 
     private fun UserEntity.toDto(): UserDto =
         UserDto(

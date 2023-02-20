@@ -26,8 +26,8 @@ class UserController(
     fun read(@PathVariable("id") id: Int): UserDto = userService.read(id)
 
     @PutMapping("/{id}")
-    fun update(@PathVariable id: Int, @RequestBody dto: UserDto) = userService.update(id, dto)
+    fun update(@PathVariable("id") id: Int, @RequestBody dto: UserDto) = userService.update(id, dto)
 
     @DeleteMapping("/{id}")
-    fun delete(@PathVariable id: Int) = userService.delete(id)
+    fun delete(@PathVariable("id") id: Int) = userService.delete(id)
 }
